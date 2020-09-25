@@ -1,32 +1,18 @@
 class StreetTile {
-  constructor(name, colour, initialPosition) {
-    this._name = name,
-    this._colour = colour,
-    this._position = initialPosition,
-    this._orientation = 'N',
-    this._streetEdges = ['N', 'W', 'E'],
-    this._isSuspect = true
+  constructor(Character) {
+    this._character = Character,
+    //tile sides are indexed starting from the top of the tile and incrementing clockwise.
+    this._orientation = 0,
+    this._streetEdges = [0, 1, 3]
   };
-  get name() {
-    return this._name;
-  };
-  get colour() {
-    return this._colour;
-  };
-  get position() {
-    return this._position;
-  };
+  get character() {
+    return this._character;
+  }
   get orientation() {
     return this._orientation;
   };
   get streetEdges() {
     return this._streetEdges;
-  };
-  get isSuspect() {
-    return this._isSuspect;
-  };
-  set position(position) {
-    this._position = position;
   };
   set orientation(direction) {
     this._orientation = direction;
@@ -34,9 +20,10 @@ class StreetTile {
   set streetEdges(streetEdge) {
     this._streetEdges.push(streetEdge);
   };
-  set isSuspect(boolean) {
-    this._isSuspect = boolean;
-  };
+  randomiseOrientation() {
+    this._orientation = Math.floor(Math.random() * 4)
+    return this._orientation
+  }
 };
 
 module.exports = StreetTile;

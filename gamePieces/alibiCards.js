@@ -1,7 +1,7 @@
 class AlibiCard {
-  constructor(name, colour, hourglasses) {
-    this._name = name,
-    this._colour = colour,
+  constructor(Character, hourglasses) {
+    this._name = Character.name,
+    this._colour = Character.colour,
     this._hourglasses = hourglasses
   };
   get name() {
@@ -15,4 +15,4 @@ class AlibiCard {
   };
 };
 
-module.exports = AlibiCard
+module.exports = AlibiCard;
