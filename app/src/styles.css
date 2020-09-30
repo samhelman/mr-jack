@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+  color: white;
+  font-family: 'Epilogue', sans-serif;
+  overflow: hidden;
+}
+
+.primary {
+  background-color: orange;
+}
+
+.secondary {
+  background-color: white;
+}
+
+.errors {
+  color: red;
+  font-size: .8em;
+}
+
+.menu-container {
+  position: relative;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 70vh;
+  width: 30vw;
+}
+
+button {
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px 1px black;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  transition: all .6s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+input {
+  display: block;
+  margin: auto;
+  width: 90%;
+  padding: 5px;
+  transition: all 1s ease;
+}
+
+.input {
+  margin: 10px 0;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
+
+.fadeIn {
+  animation: fadeIn .6s ease-in forwards;
+}
+
+.fadeOut {
+  animation: fadeOut .6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

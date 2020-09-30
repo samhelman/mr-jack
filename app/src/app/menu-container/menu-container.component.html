@@ -1,0 +1,9 @@
+<div class="menu-container">
+  <div *ngIf="child=='main-menu'">
+    <app-main-menu (menuChange)="updateMenu($event)"></app-main-menu>
+  </div>
+  
+  <div *ngIf="child=='game-menu'">
+    <app-game-menu (menuChange)="updateMenu($event)" [type]='type'></app-game-menu>
+  </div>
+</div>

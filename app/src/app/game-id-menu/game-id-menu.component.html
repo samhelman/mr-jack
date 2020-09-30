@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="game-menu-container">
+    <h2>Enter ID</h2>
+    <div class="input">
+      <input>
+      <div *ngIf="errors">
+        <div *ngFor="let error of errors">
+          <span class="errors">{{error}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

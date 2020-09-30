@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="game-menu-container">
+    <h2>Choose Role</h2>
+    <div>
+      <ul>
+        <li (click)="selectPlayer('jack')" [ngClass]="{'selected': selectedPlayer == 'jack'}"><span>Jack</span></li>
+        <li (click)="selectPlayer('detective')" [ngClass]="{'selected': selectedPlayer == 'detective'}"><span>Detective</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="game-menu-container">
+    <h2>Game ID</h2>
+    <div class="input">
+      <input [(ngModel)]="gameId">
+      <div *ngIf="errors">
+        <div *ngFor="let error of errors">
+          <span class="errors">{{error}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

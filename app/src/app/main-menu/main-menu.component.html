@@ -1,0 +1,8 @@
+<ul [ngClass]="{'fadeIn': !fadeOut, 'fadeOut': fadeOut}">
+  <li>
+    <button class="primary" (click)="updateMenu('game-menu', 'new')">New Game</button>
+  </li>
+  <li>
+    <button class="secondary" (click)="updateMenu('game-menu', 'id')">Enter Game ID</button>
+  </li>
+</ul>

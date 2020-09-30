@@ -1,0 +1,16 @@
+<div [ngClass]="{'menu': true, 'secondary': true, 'fadeIn': !fadeOut, 'fadeOut': fadeOut}">
+  <div class="back-container">
+    <a class="back" (click)="goBack()">
+      <img src="../../assets/back-black.svg">
+    </a>
+  </div>
+  <div *ngIf="type == 'new'">
+    <app-new-game-menu></app-new-game-menu>
+  </div>
+  <div *ngIf="type == 'id'">
+    <app-game-id-menu></app-game-id-menu>
+  </div>
+  <div class="button-container">
+    <button routerLink="/game" (click)="startGame()" class="primary">Enter Game!</button>
+  </div>
+</div>
